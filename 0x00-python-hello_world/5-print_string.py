@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 str = "Holberton School"
-new_striing = str + str + str
+new_string = str + str + str
 print(new_string)
 print(str[0:9])
