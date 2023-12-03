@@ -14,13 +14,13 @@ if __name__ == "__main__":
             sys.exit(1)
         else:
             if op == '+':
-                print(f"{a} {op} {b} = {a + b}")
+                print("{} + {} = {}".format(a, b, add(a, b)))
+            elif op == '-':
+                print("{} - {} = {}".format(a, b, sub(a, b)))
             elif op == '*':
-                print(f"{a} {op} {b} = {a * b}")
-            elif op == '/':
-                print(f"{a} {op} {b} = {a / b}")
+                print("{} * {} = {}".format(a, b, mul(a, b)))
             else:
-                print(f"{a} {op} {b} = {a - b}")
+                print("{} / {} = {}".format(a, b, div(a, b)))
     else:
         print(f"Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
