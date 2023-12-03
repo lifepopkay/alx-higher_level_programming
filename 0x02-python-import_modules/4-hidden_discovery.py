@@ -8,5 +8,5 @@ if __name__ == "__main__":
     for names in all_names:
         """ this will find the first two letter in
         each name """
-        if name[:2] != '__':
-            print(name)
+        if names[:2] != '__':
+            print(names)
