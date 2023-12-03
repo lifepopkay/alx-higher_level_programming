@@ -5,8 +5,8 @@ if __name__ == "__main__":
     from sys import argv
 
     if len(argv) == 4:
-        a = argv[1]
-        b = argv[3]
+        a = int(argv[1])
+        b = int(argv[3])
         op = argv[2]
 
         if op != '+' and op != '-' and op != '*' and op != '/':
