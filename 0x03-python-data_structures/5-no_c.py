@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    if 'c' in my_string:
-        n = my_string.remove(c)
-        return n
-    elif 'C' in my_string:
-        n = my_string.remove(c)
-        return n
-    else:
-        return my_string
+    n_string = my_string.translate({ord('c'): None})
+    n_string = n_string.translate({ord('C'): None})
+    return n_string
