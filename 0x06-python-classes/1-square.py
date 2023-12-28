@@ -3,7 +3,7 @@
 """ Module contains: class Square """
 
 
-class square:
+class Square:
     """
         Square: defines a square.
         Attributes:
