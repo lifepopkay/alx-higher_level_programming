@@ -18,7 +18,7 @@ class Square:
                 size (int): size of the square.
         """
 
-        if instance(size, int):
+        if (isinstance(size, int)):
             self.__size = size
             if size < 0:
                 raise ValueError("size must be >= 0")
