@@ -52,7 +52,7 @@ class Square:
     def my_print(self):
 
         """Print the square with charater #"""
-        if self.__size == 0:
+        if not self.__size:
             print()
         else:
             for i in range(self.__size):
