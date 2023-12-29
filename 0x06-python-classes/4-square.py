@@ -17,7 +17,12 @@ class Square:
             Args:
                 size (int): size of the square.
         """
-        self.__size = size
+        if not isinstance(size, int):
+            raise TypeError("size must be an interger")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
 
     @property
     def size(self):
