@@ -11,7 +11,7 @@ class Square:
                 __init__ : init of size attribute for each instance.
     """
 
-    def __int__(self, size=0):
+    def __init__(self, size=0):
 
         """ Initialization of attributes for instances
             Args:
