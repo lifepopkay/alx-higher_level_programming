@@ -1,4 +1,6 @@
+
 #!/usr/bin/python3
+""" Module 6-square: class Square """
 
 
 class Square():
@@ -45,6 +47,13 @@ class Square():
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    
+    def area(self):
+        """
+             area of the square.
+        """
+        return self.__size * self.__size
+
     @property
     def position(self):
         """ getter function for private attribuet position
@@ -55,29 +64,13 @@ class Square():
 
     @position.setter
     def position(self, value):
-        """
-            setter function for private attribute position.
-            Args:
-                value: position value to set to.
-        """
-        if not isinstance(value, tuple):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(num, int) for num in value) or
+                not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-
         self.__position = value
 
-    def area(self):
-        """
-             area of the square.
-        """
-        return self.__size * self.__size
 
     def my_print(self):
         """
@@ -86,8 +79,9 @@ class Square():
         if self.__size == 0:
             print()
         else:
-            counter = self.__position[0]
-            for i in range(0, self.__position[1]):
+            i, j = 0, 0
+            temp = self.__position[0]
+            for i in range(self.__position[1]):
                 print()
-            for j in range(0, self.__size):
-                print("{}{}".format(" " * counter, "#" * self.__size))
+            for j in range(self.__size):
+                print("{}{}".format(" " * temp, "#" * self.__size))
