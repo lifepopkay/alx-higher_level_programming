@@ -1,6 +1,4 @@
-
 #!/usr/bin/python3
-""" Module 6-square: class Square """
 
 
 class Square():
@@ -47,11 +45,7 @@ class Square():
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    
     def area(self):
-        """
-             area of the square.
-        """
         return self.__size * self.__size
 
     @property
@@ -71,11 +65,7 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-
     def my_print(self):
-        """
-            prints the square with character #
-        """
         if self.__size == 0:
             print()
         else:
