@@ -1,0 +1,124 @@
+The ``0-add_integer`` module
+============================
+
+Using  ``add_integer``
+----------------------------
+
+Import function:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Adding and subtracting integers
+    >>> add_integer(3,5)
+    8
+    >>> add_integer(3,-5)
+    -2
+    >>> add_integer(-1,4)
+    3
+
+Adding and subtracting floats
+    >>> add_integer(3.05, 6.50)
+    9
+    >>> add_integer(1.0, -2.0)
+    -1
+    >>> add_integer(-5.0, 2.0)
+    -3
+
+Adding integers and floats
+    >>> add_integer(1.5, 1)
+    2
+    >>> add_integer(1, 5.4)
+    6
+
+For single value
+
+    >>> add_integer(2)
+    100
+    >>> add_integer(2.5)
+    100
+
+For special cases
+    >>> add_integer(6, 'sch')
+    Traceback (most recent call last):
+            ...
+    TypeError: b must be an integer
+    >>> add_integer()
+            ...
+    TypeError: a must be an integer
+
+Pass None
+    >>> add_integer(None)
+    Traceback (most recent call last):
+            ...
+    TypeError: a must be an integer
+
+Adding two letters
+    >>> add_integer('2', '1')
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+Adding a letter and a number
+    >>> add_integer('2', 1)
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+    
+    >>> add_integer(2, '1')
+    Traceback (most recent call last):
+              ...
+    TypeError: b must be an integer
+
+
+Adding a tuple
+    >>> add_integer((4,5))
+    Traceback (most recent call last):
+              ...
+    TypeError: a must be an integer
+
+Adding a number and a list
+    >>> add_integer(12, [])
+    Traceback (most recent call last):
+	        ...
+    TypeError: b must be an integer
+
+Passing a string
+    >>> add_integer("Hello")
+    Traceback (most recent call last):
+	        ...
+    TypeError: a must be an integer
+
+Adding large numbers
+    >>> add_integer(6, floats("inf"))
+    Traceback (most recent call last):
+            ...
+    OverflowError: cannot convert float infinity to integer
+    
+    >>> add_integer(floats("-inf"), 5)
+    Traceback (most recent call last):
+            ...
+    OverflowError: cannot convert float infinity to integer
+    
+    >>> add_integer(6, floats("-inf"))
+    Traceback (most recent call last):
+            ...
+    OverflowError: cannot convert float infinity to integer
+    
+    >>> add_integer(floats("inf"), 9)
+    Traceback (most recent call last):
+            ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(floats("inf"), 9)
+    Traceback (most recent call last):
+            ...
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(floats("inf"), 9)
+    Traceback (most recent call last):
+            ...
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+            ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
