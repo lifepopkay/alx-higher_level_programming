@@ -5,7 +5,7 @@ This module adds number only
 """
 
 
-def add_integrer(a, b=98):
+def add_integer(a, b=98):
     """Function to add  two numbers
     Args:
         a: first number
