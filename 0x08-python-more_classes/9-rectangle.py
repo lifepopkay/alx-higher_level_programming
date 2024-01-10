@@ -96,7 +96,7 @@ class Rectangle():
 
         rec = ""
         for i in range(self.height):
-            rec += (print_symbol * self.width) + "\n"
+            rec += (str(rint_symbol * self.width) + "\n"
 
         return rec[:-1]
 
@@ -112,7 +112,7 @@ class Rectangle():
             Print the message when an instance of Rectangle is deleted
 
         """
-        Rectangle.number_of_intsances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
