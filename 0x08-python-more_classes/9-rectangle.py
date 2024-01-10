@@ -96,7 +96,7 @@ class Rectangle():
 
         rec = ""
         for i in range(self.height):
-            rec += (str(rint_symbol * self.width) + "\n"
+            rec += (str(print_symbol * self.width) + "\n"
 
         return rec[:-1]
 
