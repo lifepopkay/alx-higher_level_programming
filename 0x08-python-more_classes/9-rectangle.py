@@ -5,10 +5,9 @@ This module is composed by a class that defines a Rectangle
 
 """
 
-
 class Rectangle():
     """
-        Additional argument to first class created
+         Additional argument to first class created
 
     """
 
