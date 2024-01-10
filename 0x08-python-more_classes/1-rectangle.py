@@ -4,6 +4,8 @@
 This module is composed by a class that defines a Rectangle
 
 """
+
+
 class Rectangle():
     """
         Additional argument to first class created
@@ -17,13 +19,13 @@ class Rectangle():
     def width(self):
         """
             This returns width
-        
+
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ 
+        """
             this define width
 
             Raise:
@@ -41,7 +43,7 @@ class Rectangle():
     def height(self):
         """
             This returns height
-        
+
         """
         return self.__height
 
@@ -50,7 +52,7 @@ class Rectangle():
 
         """
             This defines height
-        
+
          Raise:
                 TypeError if height is not an integer
                 ValueError if height is less than 0
