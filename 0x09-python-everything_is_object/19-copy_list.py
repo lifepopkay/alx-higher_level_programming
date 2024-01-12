@@ -1,2 +1,3 @@
 def copy_list(l):
-	return l[:]
+	new_ele = l[:]
+	return new_ele
