@@ -11,4 +11,4 @@ class LockedClass():
     except it is called first name
 
     """
-    __slot__ = ['first_name']
+    __slots__ = ['first_name']
