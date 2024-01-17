@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""
-        BaseGeometry: to be inherited from
-        8-rectangle: class rectangle inherits from baseGeometry
 
- """
+"""
+	9-rectangle: Gives the full rectangle
+"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -18,8 +17,8 @@ class Rectangle(BaseGeometry):
                     Width: the rectangle breadth
                     height: the rectangle length
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
 
         self.__width = width
         self.__height = height
@@ -28,5 +27,10 @@ class Rectangle(BaseGeometry):
         """
             This imple,ent the area of a rectangle
         """
-        print("[Rectangle] {}/{}".format(self.width, self.height))
-        return str(self.height * self.width)
+        return (self.__height * self.__width)
+
+   def __str__(self):
+	"""
+	   Return the print() and the Str() representation of a REctangle
+	"""
+	 return "[Rectangle] {}/{}".format(self.__width, self.__height)
