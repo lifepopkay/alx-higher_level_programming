@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """
-    BaseGeometry: to be inherited from
    8-rectangle: class rectangle inherits from baseGeometry
 
 """
