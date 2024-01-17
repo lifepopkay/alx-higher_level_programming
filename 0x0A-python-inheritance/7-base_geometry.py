@@ -28,7 +28,7 @@ class BaseGeometry():
                     ValueError: if less or equal to 0
         """
 
-        if not isinstance(self.value, int):
-            raise TypeError("{self.value} must be an integer")
-        if self.value <= 0:
-            raise ValueError("{self.value} must be greater than 0")
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))
