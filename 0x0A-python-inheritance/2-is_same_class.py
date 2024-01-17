@@ -3,6 +3,7 @@
     Check if equal to the definde class
 """
 
+
 def is_same_class(obj, a_class):
     """
         is same class:
@@ -10,12 +11,12 @@ def is_same_class(obj, a_class):
                 Args:
                         obj: object to check
                         a_class: specfied class
-                Return: 
+                Return:
                         True if eqaul
                         flase if not equal
     """
 
-    if type(obj) is not  a_class:
+    if type(obj) is not a_class:
         return False
     else:
         return True

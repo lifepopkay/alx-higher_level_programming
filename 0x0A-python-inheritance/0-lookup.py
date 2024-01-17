@@ -5,6 +5,7 @@
 
 """
 
+
 def lookup(obj):
     """
         Lookup find the available attributes and method

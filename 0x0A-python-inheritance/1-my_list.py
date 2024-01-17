@@ -9,7 +9,7 @@ class MyList(list):
     """
         This inherit from a list class
 
-        Return: 
+        Return:
                 prints list in ascending order
     """
 
