@@ -3,8 +3,7 @@
     BaseGeometry: to be inherited from
    8-rectangle: class rectangle inherits from baseGeometry
 
-        """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""
 
 
 class Rectangle(BaseGeometry):
