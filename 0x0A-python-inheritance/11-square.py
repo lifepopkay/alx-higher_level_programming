@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-   10-square: inherits from Rectangle
+   11-square: inherits from Rectangle
 """
 
 Rectangle = __import__('9-rectangle').Rectangle
@@ -29,4 +29,4 @@ class Square(Rectangle):
     def __str__(self):
         """ Special method that returns the printable string """
 
-        rreturn "[Rectangle] {:d}/{:d}".format(self.__size, self.__size)
+        rreturn "[Square] {:d}/{:d}".format(self.__size, self.__size)
