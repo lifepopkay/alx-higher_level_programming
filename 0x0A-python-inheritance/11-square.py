@@ -8,7 +8,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """
-        initiasiles the size
+        initialises the size
 
         Method:
                 __init__ : this receives the intances
@@ -18,15 +18,18 @@ class Square(Rectangle):
                 Area of the squar`e
     """
     def __init__(self, size):
+        """ initialises the size """
 
         super().integer_validator("size", size)
         self.__size = size
         super().init(self.__size, self.__size)
 
     def area(self):
+        """ Return the area of Square """
+
         return self.__size * self.__size
 
     def __str__(self):
         """ Special method that returns the printable string """
 
-        rreturn "[Square] {:d}/{:d}".format(self.__size, self.__size)
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
