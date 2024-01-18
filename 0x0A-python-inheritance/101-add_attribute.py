@@ -5,7 +5,7 @@
 """
 
 
-class add_attribute(obj, name, value):
+def add_attribute(obj, name, value):
     """
         Function that adds a new attribute to an object
 
