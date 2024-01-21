@@ -3,12 +3,16 @@
     7-add_item: load, add, and save
 """
 import sys
+<<<<<<< HEAD
 """
     import the file for saving into file and loading the file 
 """
+=======
 
-save = __import__('7-save_to_json_file').save_to_json_file
-load = __import__('8-load_from_json_file').load_from_json_file
+>>>>>>> d01d7477835fd548d84ba7638e78077e57f2218f
+
+save = __import__('5-save_to_json_file').save_to_json_file
+load = __import__('6-load_from_json_file').load_from_json_file
 
 
 
