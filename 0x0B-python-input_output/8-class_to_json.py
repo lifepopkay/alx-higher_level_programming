@@ -4,7 +4,6 @@
 """
 
 
-
 def class_to_json(obj):
    """
       function convert class attributes to json
