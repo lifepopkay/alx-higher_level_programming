@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 """
+    101-stats:script that reads stdin line by line and computes metrics
+"""
+"""
     Reads from standard input and computes metrics.
 
     After every ten lines or the input of a 
