@@ -4,7 +4,7 @@
 """
 
 
-class student():
+class Student:
     """
         Method:
                 Defines a students

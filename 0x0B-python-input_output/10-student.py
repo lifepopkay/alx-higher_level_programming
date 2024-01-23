@@ -4,7 +4,7 @@
 """
 
 
-class student():
+class Student():
     """
         Method:
                 Defines a students
@@ -23,7 +23,7 @@ class student():
         self.age= age
 
     def to_json(self, attrs=None):
-        if type(attrs) == list:
-            for key in attrs:
-                return f'{key} : self.__dict__[key]'
+        if (type(attrs) == list and
+                all(type(i) == str for i in attrs)):
+            return {key: getattr(self,key) for key in attrs if hasattr(self,key)}
         return self.__dict__
