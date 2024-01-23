@@ -15,9 +15,15 @@ def append_after(filename="", search_string="", new_string=""):
         Returns:
                 file containing the text
     """
-    with open(filename, 'a', encoding= 'utf-8') as f:
-        for line in f.readline():
-            if search_string in line:
-                f.write(new_string)
-            else:
+    text = []
+    with open(filename, encoding='utf-8') as f:
+        for line in f:
+            text += line
+            if search_string not in line:
                 pass
+            else:
+                text += new_string
+
+
+    with open(filename, 'w', encoding='utf-8') as f:
+        f.write(text)
