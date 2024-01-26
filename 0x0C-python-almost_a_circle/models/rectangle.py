@@ -90,8 +90,9 @@ class Rectangle(Base):
         if self.__width <= 0 or self.__height <= 0:
             print("")
 
+        print('\n' * self.y, end='')
         for i in range(self.__height):
-            print("#" * self.__width)
+            print(' ' * self.x + "#" * self.__width)
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
