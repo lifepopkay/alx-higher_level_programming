@@ -87,7 +87,7 @@ class Rectangle(Base):
 
     def display(self):
         """display #"""
-	if self.__width <= 0 or self.__height <= 0:
+        if self.__width <= 0 or self.__height <= 0:
             print("")
 
         for i in range(self.__height):
