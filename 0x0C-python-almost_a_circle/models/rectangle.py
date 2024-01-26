@@ -112,7 +112,7 @@ class Rectangle(Base):
                 - 5th argument represents y attribute
                 **kwargs (dict): New key/value pairs of attributes.
         """
-        if args is not None and is not 0:
+        if args is not None and len(args) is not 0:
             if len(args) == 1:
                 self.id = args[0]
             elif len(args) == 2:
