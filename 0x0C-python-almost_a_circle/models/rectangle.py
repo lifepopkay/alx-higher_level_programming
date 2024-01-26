@@ -127,7 +127,7 @@ class Rectangle(Base):
             self.height = args[2]
             self.x = args[3]
         elif len(args) == 5:
-            self.id = args(0)
+            self.id = args[0]
             self.width = args[1]
             self.height = args[2]
             self.x = args[3]
