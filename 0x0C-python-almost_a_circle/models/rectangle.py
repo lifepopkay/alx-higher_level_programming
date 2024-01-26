@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-	Rectangle: Inherit from Base
+    Rectangle: Inherit from Base
 """
 from models.base import Base
 
@@ -29,6 +29,7 @@ class Rectangle(Base):
     def width(self):
         """get the width"""
         return self.__width
+    
     @width.setter
     def width(self, value):
         """set the width"""
@@ -42,6 +43,7 @@ class Rectangle(Base):
     def height(self):
         """get the height"""
         return self.__height
+    
     @height.setter
     def height(self, value):
         """set the height"""
@@ -54,20 +56,22 @@ class Rectangle(Base):
     @property
     def x(self):
         """set cordinates x"""
-            return self.__x
+        return self.__x
+    
     @x.setter
     def x(self, value):
         """set x"""
-         if value < 0:
-             raise ValueError("x must be > 0")
-         if type(value) != int:
-             raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be > 0")
+        if type(value) != int:
+            raise TypeError("x must be an integer")
         self.__x = value
 
     @property
     def y(self):
         """get y"""
         return self.__y
+    
     @y.setter
     def y(self, value):
         """set y"""
