@@ -34,7 +34,7 @@ class Rectangle(Base):
     def width(self, value):
         """set the width"""
         if value <= 0:
-            raise ValueError("width must be greater than 0")
+            raise ValueError("width must be > 0")
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         self.__width = value
