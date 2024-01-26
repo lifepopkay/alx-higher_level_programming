@@ -134,5 +134,5 @@ class Rectangle(Base):
                 self.x = args[3]
                 self.y = args[4]
         else:
-            for key, value in kwargs.item():
+            for key, value in kwargs.items():
                 setattr(self, key, value)
