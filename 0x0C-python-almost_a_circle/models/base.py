@@ -31,15 +31,11 @@ class Base:
         """Json string to file"""
 
         filename = f"{cls.__name__}.json"
+        if list_objs is None:
+            list_objs = []
 
-        string = []
-        if not list_objs:
-            pass
-        else:
-            for line in range(len(list_objs)):
-                string.append(list_objs[i].to_dictionary())
+        string = [obj.to_dictionary() for obj in list_objs]
+        j_s = to_json_string(string)
 
-        l_d = cls.to_json_string(string)
-
-        with open(filename, 'w') as f:
-            f.write(l_d)
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(j_S)
