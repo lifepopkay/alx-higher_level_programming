@@ -1,4 +1,4 @@
-The ''sample'' module
+The ''matrix divided'' module
 ===========================
 
 Using ''matrix divided''
