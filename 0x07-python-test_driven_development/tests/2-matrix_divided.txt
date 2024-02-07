@@ -1,42 +1,35 @@
-The ```matrix_divided```
-=================================
+The ''sample'' module
+===========================
 
-Using ``matrix_divided``
----------------------------------
+Using ''matrix divided''
+---------------------------
 
-Import function:
-	
-	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+import function:
+    >>> matrix_divided = __import__ ("sample").matrix_divided
 
-How it work:
-	>>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 3))
-	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+Test cases:
+    >>> matrix_divided([[1,2,3], [3,4,5]], 2)
+    [[0.5, 1.0, 1.5], [1.5, 2.0, 2.5]]
 
-	>>> print(matrix_divided([[10.0, 20.0, 30.0], [40.0, 50.0, 60.0]], 3))
-	[[3.33, 6.67, 10.0], [13.33, 16.67, 20.0]]
+    >>> matrix_divided([[10.0, -20.0, 30.0], [40.0, 50.0, -60.0]], 3)
+    [[3.33, -6.67, 10.0], [13.33, 16.67, -20.0]]
 
-	>>> print(matrix_divided([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3))
-	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
+    >>> matrix_divided([[1,-3,4.3], [-2,4,5.4, 4]], 'ui')
+    Traceback (most recent call last):
+                ...
+    TypeError: div must be a number
 
-	>>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], "boy"))
-   	Traceback (most recent call last):
-    	TypeError: div must be a number
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+    Traceback (most recent call last):
+                ...
+    ZeroDivisionError: division by zero
 
-    	>>> print(matrix_divided([[1, 2, 3], [4, 5, 6]], 0))
-    	Traceback (most recent call last):
-    	ZeroDivisionError: division by zero
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3)
+    Traceback (most recent call last):
+                ...
+    TypeError: Each row of the matrix must have the same size
 
-    	>>> print([1, 2, 3], [4, 5, 6], [7, 8, 9])
-    	[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-    	>>> print(matrix_divided([[1, 2, 3], [4, 5, 6, 7]], 3))
-    	Traceback (most recent call last):
-    	TypeError: Each row of the matrix must have the same size
-
-    	>>> print(matrix_divided([[1, 2, 3, 5], [4, 5, 6,]], 3))
-    	Traceback (most recent call last):
-    	TypeError: Each row of the matrix must have the same size
-
-    	>>> print(matrix_divided([["johnny", "red", "blue"], ["flambuoyant", "army", "world123"]], 3))
-    	Traceback (most recent call last):
-    	TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([[1, 2, 3, 'love'], [4, 5, -6,8]], 3)
+    Traceback (most recent call last):
+                ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
