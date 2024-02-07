@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This Module is composed by a function that divides the numbers of a matrix
+    matrix_divided : this divides the matrix of same lenght
 """
 
 
