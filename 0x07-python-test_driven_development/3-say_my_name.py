@@ -10,7 +10,7 @@ def say_my_name(first_name, last_name=""):
         say_my_name prints my name is <first_name> <last_name>
         Args:
             First_name (string): the 1st name
-            last_name (string): the last name  
+            last_name (string): the last name
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
