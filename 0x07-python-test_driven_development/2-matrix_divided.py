@@ -34,7 +34,7 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError(error_1)
     new_matrix = []
-    mul = 
+    mul = []
     m_len = len(matrix)
     if m_len == 0:
         raise TypeError(error_1)
@@ -57,7 +57,7 @@ def matrix_divided(matrix, div):
             for row in col:
                 if type(row) not in (int, float):
                     raise TypeError(error_1)
-        
+
         for i in range(len(matrix)):
             d_list = list(map(lambda x: round(x / div, 2), matrix[i]))
             new_l.append(d_list)
