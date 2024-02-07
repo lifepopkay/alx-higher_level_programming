@@ -30,20 +30,34 @@ def matrix_divided(matrix, div):
     if matrix == [] or type(matrix) != list:
         raise TypeError(error_1)
     error_2 = "Each row of the matix must have the same size"
-    for elems in matrix:
-        if not elems or not isinstance(elems, list):
-            raise TypeError(error)
-        for num in elems:
-            if not type(num) in (int, float):
-                raise TypeError(error)
 
-    if len(matrix[0]) != len(matrix[1]):
-        raise TypeError(error_2)
+    if not isinstance(matrix, list):
+        raise TypeError(error_1)
+    new_matrix = []
+    mul = 
+    m_len = len(matrix)
+    if m_len == 0:
+        raise TypeError(error_1)
     else:
-        if len(matrix) == 3:
-            if len(matrix[0]) != len(matrix[2]):
+        if m_len == 1:
+            for i in matrix[0]:
+                if type(i) not in (int, float):
+                    raise TypeError(error_2)
+                mul.append(float("{:.2f}".format(i / div)))
+            new_matrix.append(mul)
+            return new_matrix
+        elif mat_len == 2:
+            if len(matrix[0]) != len(matrix[1]):
                 raise TypeError(error_2)
-        new_l = []
+        else:
+            if len(matrix) == 3:
+                if len(matrix[0]) != len(matrix[2]):
+                    raise TypeError(error_2)
+        for col in matrix:
+            for row in col:
+                if type(row) not in (int, float):
+                    raise TypeError(error_1)
+        
         for i in range(len(matrix)):
             d_list = list(map(lambda x: round(x / div, 2), matrix[i]))
             new_l.append(d_list)
