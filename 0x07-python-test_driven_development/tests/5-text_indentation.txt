@@ -1,0 +1,68 @@
+The ``5-Text indentation Module``
+==============================
+
+
+Using ``text_indentation``
+-----------------------------
+
+import Module for testing
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Testing
+    >>> text_indentation("What is your name? Do you live in jamica?")
+    What is your name?
+    <BALNKLINE>
+    Do you live in jamica?
+    <BALNKLINE>
+    Though, he gave some items lists:
+    <BALNKLINE>
+    carot and sticks.
+    <BALNKLINE>
+
+    >>> text_indentation("  oh my goodness, you    he didn't come? And he left no message sir.") 
+    oh my goodness, you    he didn't come?
+    <BALNKLINE>
+    And he left no message sir.
+    <BALNKLINE>
+
+    >>> text_indentation("30.400.500000.2")                         
+    30.
+    <BALNKLINE>
+    400.
+    <BALNKLINE>
+    500000.
+    <BALNKLINE>
+
+    >>> text_indentation(555)
+    Traceback (most recent call last):
+                ...
+    TypeError: text must be a string
+
+    >>> text_indentation(Give)                 
+    Traceback (most recent call last):
+                ...
+    NameError: name 'Give' is not defined
+
+    >>> text_indentation()     
+    Traceback (most recent call last):
+                ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation('5')            
+    '5'
+    >>> text_indentation(' ') 
+    <BALNKLINE>
+    >>> text_indentation('.;:?/,><#@5^%') 
+    .
+    <BALNKLINE>
+    ;:
+    <BALNKLINE>
+    ?
+    <BALNKLINE>
+    /,><#@5^%
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+            ...
+    TypeError: text must be a string 
