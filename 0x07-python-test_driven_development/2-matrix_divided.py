@@ -24,7 +24,7 @@ def matrix_divided(matrix, div):
     if not type(div) in (int, float):
         raise TypeError("div must be a number")
     if div == 0:
-        raise ZeroDivivsioError("division by zero")
+        raise ZeroDivisionError("division by zero")
 
     error_1 = "matrix must be a matrix (list of lists) of integers/floats"
 
@@ -47,7 +47,7 @@ def matrix_divided(matrix, div):
                 mul.append(float("{:.2f}".format(i / div)))
             new_matrix.append(mul)
             return new_matrix
-        elif mat_len == 2:
+        elif m_len == 2:
             if len(matrix[0]) != len(matrix[1]):
                 raise TypeError(error_2)
         else:

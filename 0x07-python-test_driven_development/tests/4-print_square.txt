@@ -52,4 +52,4 @@ Test cases:
     >>> print_square()
     Traceback (most recent call last):
                 ...
-    TypeError: say_my_name() missing 1 required positional
+    TypeError: print_square() missing 1 required positional argument: 'size'
