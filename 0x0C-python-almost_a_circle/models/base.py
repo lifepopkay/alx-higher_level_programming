@@ -46,5 +46,29 @@ class Base:
         """JSON string to dictionary"""
         if json_string is None or len(json_string) == 0 or json_string == []:
             return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create a dummy varaible that takes the dictionary"""
+        dum_var = cls.__new__(cls)
+        dum_var.__dict__.update(dictionary)
+
+        return dum_var
+
+    @classmethod
+    def load_from_file(cls):
+        """File to instances"""
+
+        filename = f"{cls}.json"
+
+        if not filename:
+            return []
         else:
-            return json.loads(json_string)
+            with open(filename, 'r') as f:
+                data = from_json_string(f)
+                instance = []
+                for i in data:
+                    instance = cls.create(**i)
+                    instance.append(instance)
+                return instance
