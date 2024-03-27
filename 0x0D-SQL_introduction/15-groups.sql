@@ -1,3 +1,6 @@
--- Script that computes the score average of all records in a table
--- Query to computes the score average of all records in the table second_table
-SELECT AVG(score) AS average FROM second_table;
+-- Script that lists the number of records with the same score
+-- Query to lists the number of records with the same score
+SELECT score, COUNT(*) AS number
+FROM second_table
+GROUP BY score
+ORDER BY score DESC;
