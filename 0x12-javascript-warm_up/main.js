@@ -1,3 +1,5 @@
 #!/usr/bin/node
-const add = require('./13-add').add;
-console.log(add(3, 5));
+const callMeMoby = require('./101-call_me_moby').callMeMoby;
+callMeMoby(3, function () {
+  console.log('C is fun');
+});
