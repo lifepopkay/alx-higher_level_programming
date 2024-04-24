@@ -4,5 +4,5 @@
 const string = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
 for (const txt of string) {
-	console.log(txt);
+  console.log(txt);
 }
