@@ -1,14 +1,10 @@
 #!/usr/bin/node
-// count the occurences of elements
-
 exports.nbOccurences = function (list, searchElement) {
-  
-  let numOcc = 0;
-  let i = 0;
-  while (i < list.length) {
+  let nOccurrences = 0;
+  for (let i = 0; i < list.length; i++) {
     if (searchElement === list[i]) {
-      numOcc++;
-      i++;
+      nOccurrences++;
+    }
   }
-  return numOcc;
-}
+  return nOccurrences;
+};
