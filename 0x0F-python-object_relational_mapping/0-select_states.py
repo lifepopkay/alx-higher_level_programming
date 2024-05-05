@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+    A script that lists all staes from database
+"""
+
 import MySQLdb
 import sys
 """
