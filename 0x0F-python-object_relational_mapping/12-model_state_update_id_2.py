@@ -24,9 +24,11 @@ if __name__ == '__main__':
     session = Session()
 
     # fetch row to change
-    rename_state = session.query(State) \
-                          .filter(State.id == 2).first()
-    rename_state.name = 'New Mexico'
-    session.commit()
+    state = session.query(State) \
+                   .filter(State.id == 2).first()
+
+    if state:
+        state.name = 'New Mexico'
+        session.commit()
 
     session.close()
