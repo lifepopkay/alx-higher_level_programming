@@ -19,7 +19,7 @@ if __name__ == "__main__":
            WHERE states.name = {}
            ORDER BY cities.id""".format(sys.argv[4],)
 
-    cur.execute(cur)
+    cur.execute(sql)
     result = cur.fetchall()
     for line in result:
         print(line)
