@@ -1,10 +1,10 @@
 #!/usr/bin/python3
+
 """
-    A script that returns all State object
-    that contains letter a from hbtn_0e_6_usa
+    A script that lists all State objects from hbtn_0e_6_usa that conatin
+    the letter a from teh database.
     Username, password and dbname wil be passed as arguments to the script.
 """
-
 
 import sys
 from model_state import Base, State
@@ -23,12 +23,12 @@ if __name__ == '__main__':
     session = Session()
 
     # extract first state
-    state = session.query(State) \
+    states = session.query(State) \
             .filter(State.name.ilike('%a%')) \
             .order_by(State.id).all()
 
     # print state
-    for states in state
-        print("{}: {}".format(states.id, states.name))
+    for state in states
+        print("{}: {}".format(state.id, state.name))
 
     session.close()

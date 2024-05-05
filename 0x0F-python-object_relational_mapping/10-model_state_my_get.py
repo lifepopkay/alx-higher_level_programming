@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     # extract first state
     states = session.query(State)\
-            .filter_by(State.name == sys.argv[4])\
+            .filter(State.name == sys.argv[4])\
             .order_by(State.id).one_or_none()
 
     # print state
