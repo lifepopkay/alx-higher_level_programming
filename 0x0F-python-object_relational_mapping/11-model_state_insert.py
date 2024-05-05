@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    write ascript that add state object louisiana
+    write a script that add state object louisiana
     to the database
 """
 
