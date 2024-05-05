@@ -22,9 +22,9 @@ if __name__ == '__main__':
     session = Session()
 
     # extract first state
-    states = session.query(State)\
-            .filter(State.name == sys.argv[4])\
-            .order_by(State.id).one_or_none()
+    states = session.query(State) \
+                    .filter(State.name == sys.argv[4]) \
+                    .order_by(State.id).one_or_none()
 
     # print state
     if states is None:

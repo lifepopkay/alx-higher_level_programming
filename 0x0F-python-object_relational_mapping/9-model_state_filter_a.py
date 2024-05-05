@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
 """
     A script that lists all State objects from hbtn_0e_6_usa that conatin
-    the letter a from teh database.
+    the letter a from the database.
     Username, password and dbname wil be passed as arguments to the script.
 """
 
@@ -10,6 +9,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -24,11 +24,11 @@ if __name__ == '__main__':
 
     # extract first state
     states = session.query(State) \
-            .filter(State.name.ilike('%a%')) \
-            .order_by(State.id).all()
+                    .filter(State.name.ilike('%a%')) \
+                    .order_by(State.id).all()
 
     # print state
-    for state in states
+    for state in states:
         print("{}: {}".format(state.id, state.name))
 
     session.close()
