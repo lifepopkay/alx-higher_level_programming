@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-""" some codes """
+"""
+    A script that lists all State objects from the database
+    hbtn_0e_6_usa Username, password and
+    dbname will be passed as arguments to the script.
+"""
 
 from sqlalchemy import sessionmaker
 import sys
