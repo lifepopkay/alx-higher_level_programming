@@ -16,10 +16,10 @@ if __name__ == "__main__":
            FROM states
            JOIN cities
            ON states.id = cities.id;
-           WHERE states.name = {}
-           ORDER BY cities.id""".format(sys.argv[4],)
+           WHERE states.name = %s
+           ORDER BY cities.id"""
 
-    cur.execute(sql)
+    cur.execute(sql, (sys.argv[4],))
     result = cur.fetchall()
     for line in result:
         print(line)
