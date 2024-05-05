@@ -6,10 +6,11 @@
     dbname will be passed as arguments to the script.
 """
 
-from sqlalchemy import sessionmaker
+
 import sys
 from model_state import Base, State
-from sqlalchemy import (create_engine)
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -29,5 +30,6 @@ if __name__ == "__main__":
 
     for state in states:
         print("{}: {}".format(state.id, state.name)
+
 
     session.close()
