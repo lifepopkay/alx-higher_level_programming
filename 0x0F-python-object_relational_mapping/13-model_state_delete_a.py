@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-    A script that changes teh name of a State object in hbtn_0e_6_usa
-    name of State where id = 2 to New Mexico
-    Username, password, dbname will be passed as arguments to the script.
+    A script that deletes all State objects from hbtn_0e_6_usa that conatin
+    the letter a
+    Username, password and dbname wil be passed as arguments to the script.
 """
 
 
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, delete
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
@@ -17,16 +17,18 @@ if __name__ == '__main__':
                            pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
-
     Base.metadata.create_all(engine)
 
     # create a session
     session = Session()
 
-    # fetch row to change
-    rename_state = session.query(State) \
-                          .filter(State.id == 2).first()
-    rename_state.name = 'New Mexico'
+    # extract states with a in them
+    states = session.query(State).filter(State.name.ilike('%a%')).all()
+
+    # delete states
+    for state in states:
+        session.delete(state)
+
     session.commit()
 
     session.close()
