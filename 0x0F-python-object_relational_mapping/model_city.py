@@ -4,17 +4,20 @@
     City class
 """
 
-import sys
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from model_state import Base, State
+
+from sqlalchemy import Column, Integer, String, ForeignKey
+from model_state import Base
 
 
 class City(Base):
+     """
+    Class that defines each city
+    """
     __tablename__ = 'cities'
 
-    id = Column(Integer, primary_key=True, nullable=False,
+    id = Column(Integer, primary_key=True, 
+                nullable=False, unique=True,
                 autoincrement=True)
     name = Column(String(128), nullable=True)
     state_id = Column(Integer, nullable=False,
-                      Foreignkey('states.id'))
+                      ForeignKey('states.id'))
