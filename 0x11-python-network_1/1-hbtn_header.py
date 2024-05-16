@@ -3,11 +3,12 @@
 
 import urllib.request
 import sys
-
 """
     Send a request and fetch the value of 
     X-Request-Id
 """
+
+
 url = sys.argv[1]
 with urllib.request.urlopen(url) as response:
     html = response.info()
