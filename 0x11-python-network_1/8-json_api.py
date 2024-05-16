@@ -22,7 +22,7 @@ def search_api(letter):
                                    json_req.get('name')))
         else:
             print("No result")
-    except request.exceptions.JSONDecodeError:
+    except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
 
 
