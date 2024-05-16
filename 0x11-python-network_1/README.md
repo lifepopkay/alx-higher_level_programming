@@ -1,8 +1,8 @@
 # 0x11. Python - Network #1
 
-Resources
-`https://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQhttps://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQhttps://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQ`
-`https://intranet.alxswe.com/rltoken/OGcRGPr7TSWtzypDd0ZibQ`
+### Resources
+- `https://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQhttps://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQhttps://intranet.alxswe.com/rltoken/KoRrs5dVWsb-B82e-M1TQQ`
+- `https://intranet.alxswe.com/rltoken/OGcRGPr7TSWtzypDd0ZibQ`
 
 ## General
 - How to fetch internet resources with the Python package urllib
