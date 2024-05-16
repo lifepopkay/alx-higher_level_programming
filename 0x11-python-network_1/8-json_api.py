@@ -8,7 +8,6 @@ Uses the requests package and adheres to the specified constraints.
 
 import sys
 import requests
-import json
 
 
 def search_api(letter):
@@ -23,7 +22,7 @@ def search_api(letter):
                                    json_req.get('name')))
         else:
             print("No result")
-    except json.JSONDecodeError:
+    except request.exceptions.JSONDecodeError:
         print("Not a valid JSON")
 
 
