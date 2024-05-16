@@ -9,8 +9,9 @@ import sys
 """
 
 
-url = sys.argv[1]
-with urllib.request.urlopen(url) as response:
-    html = response.info()
-    header = html.get('X-Request-Id')
-    print("{}".format(header))
+if __name__ == '__main__':
+    url = sys.argv[1] 
+    with urllib.request.urlopen(url) as response:
+        html = response.info()
+        header = html.get('X-Request-Id')
+        print("{}".format(header))
