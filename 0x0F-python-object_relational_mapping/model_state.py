@@ -4,13 +4,13 @@
     this module contains a Base and State class
 """
 
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Column
 from sqlalchemy import String
 from sqlalchemy import Integer
 
 
-Base = declarative_base()
+Base = DeclarativeBase()
 
 
 class State(Base):
