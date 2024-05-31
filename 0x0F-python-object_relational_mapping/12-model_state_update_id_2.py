@@ -12,8 +12,8 @@ if __name__ == "__main__":
     """
 
     if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database name>".format(sys.argv[0]))
-        sys.exit(1)
+        print('Use: username, password database_name')
+        exit(1)
 
     username, password, database_name = sys.argv[1:]
 
@@ -39,4 +39,3 @@ if __name__ == "__main__":
 
     # Close the session
     session.close()
-
