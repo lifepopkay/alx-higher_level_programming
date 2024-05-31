@@ -4,12 +4,11 @@
     name of State where id = 2 to New Mexico
     Username, password, dbname will be passed as arguments to the script.
 """
-
-
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+
 
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
