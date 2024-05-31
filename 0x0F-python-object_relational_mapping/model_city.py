@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """
 Contains the class definition of a City
+inherits from BAse
+class attribute id
+class attribute name
+class attribute state_id
 """
 
 
