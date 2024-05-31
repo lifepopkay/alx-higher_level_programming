@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-
 """
     City class
 """
-
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer,
+from sqlalchemy import String, ForeignKey
 from model_state import Base
 
 
