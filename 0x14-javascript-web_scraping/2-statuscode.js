@@ -3,16 +3,15 @@
 // get request
 
 // fetch the url for the command
-const Url = process.argv[2];
+const url = process.argv[2];
 
-const { url } = require('inspector');
 // Pass command into the request module
 const request = require('request');
 
-request(url, function(err, response, body) {
-    if (err) {
-        console.error('code:', response.statusCode);
-        return;
-    }
-    console.log('code:', response.statusCode);
+request(url, function(err, response) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(`code:, ${response.statusCode}`);
 });

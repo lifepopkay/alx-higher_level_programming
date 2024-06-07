@@ -7,11 +7,11 @@ const fs = require('fs');
 const text = process.argv[2]
 
 fs.readFile(text, 'utf8', (err, data) => {
-	if (err) {
-		// Print error if an error occured
-		console.error(err);
-		return;
-	}
-	// print the content of the file
-	console.log(data);
+  if (err) {
+  // Print error if an error occured
+    console.error(err);
+    return;
+  }
+  // print the content of the file
+  console.log(data);
 });
