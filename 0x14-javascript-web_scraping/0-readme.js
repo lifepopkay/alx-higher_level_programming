@@ -4,7 +4,7 @@
 const fs = require('fs');
 
 // get the file path from the first argument
-const text = process.argv[2]
+const text = process.argv[2];
 
 fs.readFile(text, 'utf8', (err, data) => {
   if (err) {
