@@ -8,7 +8,7 @@ const url = process.argv[2];
 // Pass command into the request module
 const request = require('request');
 
-request(url, function(err, response) {
+request(url, function (err, response) {
   if (err) {
     console.error(err);
     return;
