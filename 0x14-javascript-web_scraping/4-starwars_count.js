@@ -15,8 +15,13 @@ request(url, (error, response, body) => {
   }
 
   const data = JSON.parse(body).results;
+  const chara_list = []
 
-  for (let i = 0; i < dta.length; i++) {
-    const a = data[i].charaters
-  console.log(data);
+  for (let i = 0; i < data.length; i++) {
+    const character = data[i].charaters;
+    for (let j = 0; j < character.length; j++) {
+      chara_list[j] = character[j].find('18');
+    }
+  } 
+  console.log(chara_list);
 });
