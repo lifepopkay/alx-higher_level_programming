@@ -24,6 +24,6 @@ request(url, (error, response, body) => {
         count++;
       }
     }
-  } 
+  }
   console.log(count);
 });
