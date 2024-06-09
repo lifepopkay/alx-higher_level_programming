@@ -3,11 +3,11 @@
 // the character "wedge Antiles" is present
 
 const request = require('request');
-const url = process.argv[2]
-const wedgeAntillesId = 18;
-const new_url = url + '/' + wedgeAntillesId
+const url = process.argv[2];
+const characterId = url + '/18';
+let count = 0;
 
-// MAke request to the url
+// Make request to the url
 request(url, (error, response, body) => {
   if (error) {
     console.error(error);
@@ -15,13 +15,16 @@ request(url, (error, response, body) => {
   }
 
   const data = JSON.parse(body).results;
-  const chara_list = []
 
+  // iterate through the json result
   for (let i = 0; i < data.length; i++) {
-    const character = data[i].charaters;
+    const character = data[i].characters;
+    // iterate through the character
     for (let j = 0; j < character.length; j++) {
-      chara_list[j] = character[j].find('18');
+      if (character[j].search('18') > 0) {
+        count++;
+      }
     }
   } 
-  console.log(chara_list);
+  console.log(count);
 });
