@@ -2,9 +2,7 @@
 // Prints the number of movies where
 // the character "wedge Antiles" is present
 
-const { error } = require('console');
 const request = require('request');
-const { json } = require('stream/consumers');
 const url = process.argv[2]
 const wedgeAntillesId = 18;
 const new_url = url + '/' + wedgeAntillesId
@@ -16,6 +14,9 @@ request(url, (error, response, body) => {
     return;
   }
 
-  const data = JSON.parse(body)
-  console.log(`${data}`);
+  const data = JSON.parse(body).results;
+
+  for (let i = 0; i < dta.length; i++) {
+    const a = data[i].charaters
+  console.log(data);
 });
