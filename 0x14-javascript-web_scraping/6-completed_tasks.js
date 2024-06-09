@@ -1,23 +1,18 @@
 #!/usr/bin/node
-// compute the number of tasks completed
-
 const request = require('request');
-const Url = process.argv[2];
 
-request(Url, (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  const result = {}
-  const data = JSON.parse(body);
-  for (let i = 0 < body.length; i++) {
-    if (data[i].completed === true) {
-        if (result[data[i].userId] === undefined) {
-            result[data[i].userId] = 0;
+request(process.argv[2], function (err, response, body) {
+  if (err == null) {
+    const resp = {};
+    const json = JSON.parse(body);
+    for (let i = 0; i < json.length; i++) {
+      if (json[i].completed === true) {
+        if (resp[json[i].userId] === undefined) {
+          resp[json[i].userId] = 0;
         }
-        result[data[i].userId]++;
+        resp[json[i].userId]++;
+      }
     }
-    console.log(result);
+    console.log(resp);
   }
 });
