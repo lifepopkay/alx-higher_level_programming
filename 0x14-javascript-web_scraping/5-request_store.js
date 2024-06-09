@@ -2,7 +2,6 @@
 // Get the contents of a webpage
 // and stores in a file
 
-const { error } = require('console');
 const request = require('request');
 const Url = process.argv[2];
 const file = process.argv[3];
